@@ -22,7 +22,7 @@ const Footer = () => {
       {/* Content */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-15">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-15">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -33,7 +33,7 @@ const Footer = () => {
                 height={32}
                 className="dark:brightness-200"
               />
-              <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
+              <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white">
                 Book
                 <span className="text-xl font-medium text-yellow-400">
                   Land
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="text-md font-semibold text-yellow-600 dark:text-white mb-4">
+            <h3 className="text-2xl font-semibold text-yellow-600 dark:text-white mb-4">
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
@@ -82,7 +82,7 @@ const Footer = () => {
 
           {/* CTA Block */}
           <div className="space-y-4">
-            <h3 className="text-md font-semibold text-yellow-600 dark:text-white">
+            <h3 className="text-2xl font-semibold text-yellow-600 dark:text-white">
               Contact Us
             </h3>
             <h2 className="flex items-center gap-2">
@@ -93,7 +93,7 @@ const Footer = () => {
               <FaLocationDot /> Bangla Bazar, 1203, Dhaka
             </p>
 
-            <ul className='flex gap-3 text-2xl'>
+            <ul className="flex gap-3 text-2xl">
               <li>
                 <FaFacebook />
               </li>
@@ -104,6 +104,42 @@ const Footer = () => {
                 <FaTwitterSquare />
               </li>
             </ul>
+          </div>
+
+          {/*Newsletter*/}
+
+          <div>
+            <h2 class="text-yellow-600 text-2xl font-semibold mb-4">Newsletter</h2>
+            <p class="text-gray-600 mb-8">
+              {' '}
+              Subscribe to our newsletter for updates <br />
+              and offers.
+            </p>
+
+            <div class="flex items-center bg-gray-200 rounded-full overflow-hidden max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder=""
+                class="flex-1 px-5 py-3 bg-gray-200 outline-none text-black"
+              />
+
+              <button class="px-5 py-3 bg-gradient-to-r from-yellow-500 to-yellow-300 text-white flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
