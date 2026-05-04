@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
+import HowItWorks from "@/components/HowItWorks";
 import MarqueeSection from "@/components/MarqueeSection";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div >
       <Banner></Banner>
       <MarqueeSection></MarqueeSection>
+      <HowItWorks></HowItWorks>
       <Footer></Footer>
     </div>
   );
