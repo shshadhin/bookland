@@ -94,10 +94,10 @@ const Footer = () => {
             </p>
 
             <ul className="flex gap-3 text-2xl">
-              <li>
+              <li className="text-blue-600">
                 <FaFacebook />
               </li>
-              <li>
+              <li className="text-pink-800">
                 <FaSquareInstagram />
               </li>
               <li>
@@ -109,7 +109,9 @@ const Footer = () => {
           {/*Newsletter*/}
 
           <div>
-            <h2 class="text-yellow-600 text-2xl font-semibold mb-4">Newsletter</h2>
+            <h2 class="text-yellow-600 text-2xl font-semibold mb-4">
+              Newsletter
+            </h2>
             <p class="text-gray-600 mb-8">
               {' '}
               Subscribe to our newsletter for updates <br />
@@ -120,10 +122,10 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder=""
-                class="flex-1 px-5 py-3 bg-gray-200 outline-none text-black"
+                class="flex-1 px-5 bg-gray-200 outline-none text-black"
               />
 
-              <button class="px-5 py-3 bg-gradient-to-r from-yellow-500 to-yellow-300 text-white flex items-center justify-center">
+              <button class="px-5 py-3 bg-gradient-to-r from-yellow-600 to-yellow-500 text-white flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="w-5 h-5"

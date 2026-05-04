@@ -1,6 +1,6 @@
 export default function Review() {
   return (
-    <section className=" py-20">
+    <section className=" py-10">
       <div className="max-w-7xl mx-auto px-4 text-center">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-yellow-400">

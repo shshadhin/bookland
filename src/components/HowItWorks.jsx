@@ -12,7 +12,7 @@ export default function HowItWorks() {
         {/* Cards */}
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {/* Card 1 */}
-          <div className="bg-base-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+          <div className="bg-base-100 border border-yellow-200  rounded-2xl p-8 shadow-sm hover:shadow-md transition">
             <div className="flex justify-center mb-6">
               <div className="bg-purple-100 p-4 rounded-xl">🔍</div>
             </div>
@@ -24,7 +24,7 @@ export default function HowItWorks() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-base-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+          <div className="bg-base-100 border border-yellow-200  rounded-2xl p-8 shadow-sm hover:shadow-md transition">
             <div className="flex justify-center mb-6">
               <div className="bg-purple-100 p-4 rounded-xl">📖</div>
             </div>
@@ -36,7 +36,7 @@ export default function HowItWorks() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-base-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+          <div className="bg-base-100 border border-yellow-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
             <div className="flex justify-center mb-6">
               <div className="bg-purple-100 p-4 rounded-xl">👤</div>
             </div>
