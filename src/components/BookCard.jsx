@@ -1,19 +1,29 @@
+import { Button, Card, Chip } from '@heroui/react';
 import Image from 'next/image';
 import React from 'react';
 
 const BookCard = ({ book }) => {
   console.log(book)
   return (
-    <div>
-      <Image
-        src={book.image_url}
-        height={200}
-        width={200}
-        alt={book.title}
-      
-      ></Image>
-      <h2>{book.title}</h2>
-    </div>
+    <Card className="border">
+      <div className="w-full h-[300px] relative overflow-hidden rounded-lg">
+        <Image
+          src={book.image_url}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover"
+          alt={book.title}
+        />
+      </div>
+      <div className='text-center'>
+        <h2 className="text-xl font-bold text-yellow-600">{book.title}</h2>
+        <p className="text-lg font-medium">{book.author}</p>
+      </div>
+      <Chip size="sm" color="danger" className="absolute right-6 top-6">
+        {book.category}
+      </Chip>
+      <Button className="w-full bg-yellow-500">View Details</Button>
+    </Card>
   );
 };
 
