@@ -6,7 +6,7 @@
     "description": "A mysterious tale of a forest where no sound exists and secrets unfold.",
     "category": "Story",
     "available_quantity": 8,
-    "image_url": "https://example.com/images/silent-forest.jpg"
+    "image_url": "https://i.ibb.co.com/svLHKt1V/1.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A complete guide to modern JavaScript for beginners and professionals.",
     "category": "Tech",
     "available_quantity": 12,
-    "image_url": "https://example.com/images/mastering-js.jpg"
+    "image_url": "https://i.ibb.co.com/V0hQZzpC/2.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "An exploration of space, galaxies, and the mysteries of the universe.",
     "category": "Science",
     "available_quantity": 5,
-    "image_url": "https://example.com/images/beyond-stars.jpg"
+    "image_url": "https://i.ibb.co.com/vCTv1H8n/3jpg.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "A touching story about love, loss, and a letter that changes everything.",
     "category": "Story",
     "available_quantity": 10,
-    "image_url": "https://example.com/images/last-letter.jpg"
+    "image_url": "https://i.ibb.co.com/7dBtGxGB/4.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "Learn how to build scalable web apps using React and modern tools.",
     "category": "Tech",
     "available_quantity": 7,
-    "image_url": "https://example.com/images/react-action.jpg"
+    "image_url": "https://i.ibb.co.com/Nkw2NrV/5.jpg"
   },
   {
     "id": 6,
@@ -51,16 +51,16 @@
     "description": "A deep dive into how the human brain works and processes information.",
     "category": "Science",
     "available_quantity": 6,
-    "image_url": "https://example.com/images/human-brain.jpg"
+    "image_url": "https://i.ibb.co.com/35cRsGWr/6.jpg"
   },
   {
     "id": 7,
-    "title": "Whispers of the Night",
+    "title": "Whispers in the Night",
     "author": "Imran Hossain",
     "description": "A suspenseful story set in a quiet town full of hidden dangers.",
     "category": "Story",
     "available_quantity": 9,
-    "image_url": "https://example.com/images/whispers-night.jpg"
+    "image_url": "https://i.ibb.co.com/5ggjdgm6/7.jpg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "An easy-to-follow introduction to Python programming.",
     "category": "Tech",
     "available_quantity": 15,
-    "image_url": "https://example.com/images/python-everyone.jpg"
+    "image_url": "https://i.ibb.co.com/mC2w0C2S/8.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "Understanding the causes and impacts of climate change globally.",
     "category": "Science",
     "available_quantity": 4,
-    "image_url": "https://example.com/images/climate-change.jpg"
+    "image_url": "https://i.ibb.co.com/jZxNLJT1/9.jpg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "A powerful narrative about struggles, hope, and redemption.",
     "category": "Story",
     "available_quantity": 11,
-    "image_url": "https://example.com/images/broken-dreams.jpg"
+    "image_url": "https://i.ibb.co.com/jvJGZRtk/10.jpg"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "A practical guide to building fast web apps with Next.js.",
     "category": "Tech",
     "available_quantity": 13,
-    "image_url": "https://example.com/images/nextjs-essentials.jpg"
+    "image_url": "https://i.ibb.co.com/nsfNCMsP/11.webp"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "description": "An introduction to the strange and fascinating world of quantum physics.",
     "category": "Science",
     "available_quantity": 3,
-    "image_url": "https://example.com/images/quantum-basics.jpg"
+    "image_url": "https://i.ibb.co.com/7tYrkmwH/12.jpg"
   }
 ]
