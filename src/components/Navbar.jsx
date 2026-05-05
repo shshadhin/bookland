@@ -10,7 +10,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const navLinkStyle = path =>
-    `relative pb-1 ${pathname === path ? 'text-yellow-400' : ''}`;
+    `relative pb-1 ${pathname === path ? 'text-yellow-600' : 'text-black'}`;
 
   const navItems = (
     <>

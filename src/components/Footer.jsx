@@ -109,34 +109,34 @@ const Footer = () => {
           {/*Newsletter*/}
 
           <div>
-            <h2 class="text-yellow-600 text-2xl font-semibold mb-4">
+            <h2 className="text-yellow-600 text-2xl font-semibold mb-4">
               Newsletter
             </h2>
-            <p class="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-8">
               {' '}
               Subscribe to our newsletter for updates <br />
               and offers.
             </p>
 
-            <div class="flex items-center bg-gray-200 rounded-full overflow-hidden max-w-md mx-auto">
+            <div className="flex items-center bg-gray-200 rounded-full overflow-hidden max-w-md mx-auto">
               <input
                 type="email"
                 placeholder=""
-                class="flex-1 px-5 bg-gray-200 outline-none text-black"
+                className="flex-1 px-5 bg-gray-200 outline-none text-black"
               />
 
-              <button class="px-5 py-3 bg-gradient-to-r from-yellow-600 to-yellow-500 text-white flex items-center justify-center">
+              <button className="px-5 py-3 bg-gradient-to-r from-yellow-600 to-yellow-500 text-white flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
+                  className="w-5 h-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
