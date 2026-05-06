@@ -5,7 +5,7 @@ import React from 'react';
 const BookCard = ({ book }) => {
   console.log(book)
   return (
-    <Card className="border">
+    <Card className="border border-yellow-200 shadow-md">
       <div className="w-full h-[300px] relative overflow-hidden rounded-lg">
         <Image
           src={book.image_url}
@@ -17,7 +17,7 @@ const BookCard = ({ book }) => {
       </div>
       <div className='text-center'>
         <h2 className="text-xl font-bold text-yellow-600">{book.title}</h2>
-        <p className="text-lg font-medium">{book.author}</p>
+        <p className="text-lg font-medium text-gray-500">{book.author}</p>
       </div>
       <Chip size="sm" color="danger" className="absolute right-6 top-6">
         {book.category}
