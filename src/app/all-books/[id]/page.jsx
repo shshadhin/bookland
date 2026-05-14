@@ -16,7 +16,7 @@ const BookDetailsPage = async ({ params }) => {
       {/* Back Button */}
       <div className="max-w-7xl mx-auto ">
         <Link href={'/all-books'}>
-          <button className="flex items-center gap-2  bg-white px-5 py-2 rounded-full shadow text-gray-700 mb-8">
+          <button className="flex items-center gap-2 bg-yellow-200 px-5 py-2 rounded-full shadow text-black font-medium mb-8">
             ← Back to all books
           </button>
         </Link>
