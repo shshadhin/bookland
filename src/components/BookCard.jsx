@@ -1,5 +1,6 @@
 import { Button, Card, Chip } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const BookCard = ({ book }) => {
@@ -15,14 +16,16 @@ const BookCard = ({ book }) => {
           alt={book.title}
         />
       </div>
-      <div className='text-center'>
+      <div className="text-center">
         <h2 className="text-xl font-bold text-yellow-600">{book.title}</h2>
         <p className="text-lg font-medium text-gray-500">{book.author}</p>
       </div>
       <Chip size="sm" color="danger" className="absolute right-6 top-6">
         {book.category}
       </Chip>
-      <Button className="w-full bg-yellow-500">View Details</Button>
+      <Link href={`/all-books/${book.id}`}>
+        <Button className="w-full bg-yellow-500">View Details</Button>
+      </Link>
     </Card>
   );
 };
