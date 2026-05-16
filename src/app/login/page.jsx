@@ -5,6 +5,24 @@ import { FcGoogle } from 'react-icons/fc';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 
 const SignInPage = () => {
+   const handleSubmit = async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.currentTarget);
+      const user = Object.fromEntries(formData.entries());
+      // console.log(user);
+      const { data, error } = await authClient.signIn.email({
+        email: user.email,
+        password: user.password,
+      });
+      console.log('Data', data, error);
+      if (data) {
+        redirect('/')
+      }
+      if (error) {
+        toast.error('This email is already used');
+      }
+    };
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f7f7f7] relative overflow-hidden px-4 py-10">
       {/* Background Blur Effects */}
@@ -29,7 +47,7 @@ const SignInPage = () => {
           </div>
 
           {/* Form */}
-          <form className="mt-12 space-y-7">
+          <form onSubmit={handleSubmit} className="mt-12 space-y-7">
             {/* Email */}
             <div>
               <label className="text-sm font-semibold text-gray-700 block mb-3">

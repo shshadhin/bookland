@@ -1,9 +1,10 @@
-import BookCard from "@/components/BookCard";
+
+import BookCard from '@/components/BookCard';
 
 const AllBooksPage = async () => {
   const res = await fetch('https://book-land-fawn.vercel.app/data.json');
   const books = await res.json();
-  console.log(books)
+  console.log(books);
   return (
     <div className="max-w-7xl mx-auto">
       <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-base-content tracking-tight leading-tight max-w-4xl mx-auto mb-2 mt-5 text-center">
@@ -16,6 +17,7 @@ const AllBooksPage = async () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 px-5">
+        
         {books.map(book => (
           <BookCard key={book.id} book={book}></BookCard>
         ))}
