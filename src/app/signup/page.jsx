@@ -19,7 +19,7 @@ const SignUpPage = () => {
       password: user.password,
       image: user.image 
     });
-    // console.log('Data', data, error);
+    console.log('Data', data, error);
     if (data) {
       redirect('/login')
     }
