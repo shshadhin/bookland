@@ -19,20 +19,34 @@ const Navbar = () => {
   const navLinkStyle = path =>
     `relative pb-1 ${pathname === path ? 'text-yellow-600' : 'text-black'}`;
 
+  // const navItems = (
+  //   <>
+  //     <li className={navLinkStyle('/')}>
+  //       <Link href="/">Home</Link>
+  //     </li>
+  //     <li className={navLinkStyle('/all-books')}>
+  //       <Link href="/all-books">All Books</Link>
+  //     </li>
+  //     <li className={navLinkStyle('/profile')}>
+  //       <Link href="/profile">Profile</Link>
+  //     </li>
+  //   </>
+  // );
   const navItems = (
     <>
       <li className={navLinkStyle('/')}>
         <Link href="/">Home</Link>
       </li>
+
       <li className={navLinkStyle('/all-books')}>
-        <Link href="/all-books">All Books</Link>
+        <Link href={user ? '/all-books' : '/signup'}>All Books</Link>
       </li>
+
       <li className={navLinkStyle('/profile')}>
-        <Link href="/profile">Profile</Link>
+        <Link href={user ? '/profile' : '/signup'}>Profile</Link>
       </li>
     </>
   );
-
   return (
     <div className="border-b px-3 bg-yellow-100">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto">
@@ -100,7 +114,7 @@ const Navbar = () => {
                 <li>
                   <Link>
                     <button
-                      onSubmit={handleSignOut}
+                      onClick={handleSignOut}
                       className="btn btn-warning w-full"
                     >
                       Log Out

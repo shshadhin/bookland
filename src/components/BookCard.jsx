@@ -1,10 +1,12 @@
+
 import { Button, Card, Chip } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 const BookCard = ({ book }) => {
-  console.log(book)
+  
+  console.log(book);
   return (
     <Card className="border border-yellow-200 shadow-md">
       <div className="w-full h-[300px] relative overflow-hidden rounded-lg">
@@ -26,6 +28,7 @@ const BookCard = ({ book }) => {
       <Link href={`/all-books/${book.id}`}>
         <Button className="w-full bg-yellow-500">View Details</Button>
       </Link>
+      
     </Card>
   );
 };
