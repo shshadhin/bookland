@@ -1,4 +1,5 @@
 'use client';
+import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -6,6 +7,12 @@ import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+  console.log(user);
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  }
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -57,12 +64,21 @@ const Navbar = () => {
 
         {/* RIGHT BUTTONS (desktop) */}
         <div className="hidden md:flex gap-3">
-          <Link href="/login">
-            <button className="btn btn-warning btn-sm">Login</button>
-          </Link>
-          <Link href="/signup">
-            <button className="btn btn-warning btn-sm">Sign Up</button>
-          </Link>
+          {user ? (
+            <button onClick={handleSignOut} className="btn btn-warning btn-sm">
+              Log Out
+            </button>
+          ) : (
+            <>
+              <Link href="/login">
+                <button className="btn btn-warning btn-sm">Login</button>
+              </Link>
+
+              <Link href="/signup">
+                <button className="btn btn-warning btn-sm">Sign Up</button>
+              </Link>
+            </>
+          )}
         </div>
 
         {/* MOBILE MENU BUTTON */}
@@ -79,12 +95,29 @@ const Navbar = () => {
           <ul className="flex flex-col gap-3 font-medium">{navItems}</ul>
 
           <div className="flex flex-col gap-2">
-            <Link href="/login">
-              <button className="btn btn-warning w-full">Login</button>
-            </Link>
-            <Link href="/signup">
-              <button className="btn btn-warning w-full">Sign Up</button>
-            </Link>
+            {user ? (
+              <>
+                <li>
+                  <Link>
+                    <button
+                      onSubmit={handleSignOut}
+                      className="btn btn-warning w-full"
+                    >
+                      Log Out
+                    </button>
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <Link href="/login">
+                  <button className="btn btn-warning w-full">Login</button>
+                </Link>
+                <Link href="/signup">
+                  <button className="btn btn-warning w-full">Sign Up</button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

@@ -27,7 +27,11 @@ const SignUpPage = () => {
       toast.error('This email is already used');
     }
   };
- 
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google"
+    })
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f7f7f7] relative overflow-hidden px-4 py-10">
@@ -144,7 +148,7 @@ const SignUpPage = () => {
           </div>
 
           {/* Google Button */}
-          <button className="w-full border border-gray-300 rounded-xl py-3 flex items-center justify-center gap-3 hover:bg-gray-50 transition">
+          <button onClick={handleGoogleSignIn} className="w-full border border-gray-300 rounded-xl py-3 flex items-center justify-center gap-3 hover:bg-gray-50 transition">
             <FcGoogle size={24} />
 
             <span className="font-medium text-gray-700">
