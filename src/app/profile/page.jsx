@@ -42,7 +42,7 @@ const ProfilePage = () => {
         <div className="mt-8">
           <Link href="/profile/update-profile">
             <Button className="w-full h-14 text-lg font-bold rounded-2xl bg-yellow-500 hover:bg-yellow-700 text-white shadow-lg">
-              Update Profile
+              Update Profiles
             </Button>
           </Link>
         </div>
