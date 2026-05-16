@@ -3,6 +3,7 @@
 import { authClient } from '@/lib/auth-client';
 import { Button } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ProfilePage = () => {
   const { data: session } = authClient.useSession();
@@ -28,7 +29,7 @@ const ProfilePage = () => {
 
         {/* User Info */}
         <div className="text-center mt-6">
-          <h1 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-indigo-700 to-pink-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent">
             {user?.name || 'User Name'}
           </h1>
 
@@ -39,9 +40,11 @@ const ProfilePage = () => {
 
         {/* Button */}
         <div className="mt-8">
-          <Button className="w-full h-14 text-lg font-bold rounded-2xl bg-indigo-700 hover:bg-indigo-800 text-white shadow-lg">
-            Update Profile
-          </Button>
+          <Link href="/profile/update-profile">
+            <Button className="w-full h-14 text-lg font-bold rounded-2xl bg-yellow-500 hover:bg-yellow-700 text-white shadow-lg">
+              Update Profile
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
