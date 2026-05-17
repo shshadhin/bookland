@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
   const { data: session } = authClient.useSession();
@@ -13,7 +14,11 @@ const Navbar = () => {
   const handleSignOut = async () => {
     await authClient.signOut();
 
-    router.push('/');
+    toast.success('Logout Successful');
+
+    // setTimeout(() => {
+    //   router.push('/');
+    // }, 1000);
   };
   const pathname = usePathname();
   const router = useRouter();

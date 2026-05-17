@@ -20,9 +20,12 @@ const LoginPage = () => {
       password: user.password,
     });
     console.log('Data', data, error);
-    if (data) {
-      toast.success('Login Successful')
-      router.replace('/');
+    if (!error) {
+      toast.success('Login Successful');
+
+      setTimeout(() => {
+        router.replace('/');
+      }, 1000);
     }
     if (error) {
       toast.error('Invalid email or password');
@@ -69,7 +72,8 @@ const LoginPage = () => {
 
                 <input
                   type="email"
-                  name= "email"
+                  name="email"
+                  required
                   placeholder="hello@example.com"
                   className="w-full border border-gray-300 rounded-lg py-3.5 pl-12 pr-4 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition"
                 />
@@ -87,7 +91,8 @@ const LoginPage = () => {
 
                 <input
                   type="password"
-                  name= "password"
+                  name="password"
+                  required
                   placeholder="••••••••"
                   className="w-full border border-gray-300 rounded-lg py-3.5 pl-12 pr-4 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition"
                 />

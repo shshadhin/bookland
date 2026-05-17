@@ -21,7 +21,7 @@ const SignUpPage = () => {
       image: user.image 
     });
     console.log('Data', data, error);
-    if (data) {
+    if (!error) {
       toast.success('Signup Successful, Please login');
 
       setTimeout(() => {
