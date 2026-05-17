@@ -1,5 +1,6 @@
 'use client';
 import { authClient } from '@/lib/auth-client';
+import { Avatar } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -27,6 +28,8 @@ const Navbar = () => {
   const navLinkStyle = path =>
     `relative pb-1 ${pathname === path ? 'text-yellow-600' : 'text-black'}`;
 
+
+  
   const navItems = (
     <>
       <li className={navLinkStyle('/')}>
@@ -40,6 +43,7 @@ const Navbar = () => {
       <li className={navLinkStyle('/profile')}>
         <Link href={user ? '/profile' : '/signup'}>Profile</Link>
       </li>
+      
     </>
   );
   return (
@@ -72,11 +76,22 @@ const Navbar = () => {
         </ul>
 
         {/* RIGHT BUTTONS (desktop) */}
-        <div className="hidden md:flex gap-3">
+        <div className="hidden md:flex gap-3 items-center">
           {user ? (
-            <button onClick={handleSignOut} className="btn btn-warning btn-sm">
-              Log Out
-            </button>
+            <>
+              {/* ✅ USER NAME */}
+              <div className="font-medium">{user?.name}</div>
+
+              
+
+              {/* ✅ LOGOUT BUTTON */}
+              <button
+                onClick={handleSignOut}
+                className="btn btn-warning btn-sm"
+              >
+                Log Out
+              </button>
+            </>
           ) : (
             <>
               <Link href="/login">
@@ -107,14 +122,12 @@ const Navbar = () => {
             {user ? (
               <>
                 <li>
-                  <Link>
-                    <button
-                      onClick={handleSignOut}
-                      className="btn btn-warning w-full"
-                    >
-                      Log Out
-                    </button>
-                  </Link>
+                  <button
+                    onClick={handleSignOut}
+                    className="btn btn-warning w-full"
+                  >
+                    Log Out
+                  </button>
                 </li>
               </>
             ) : (
