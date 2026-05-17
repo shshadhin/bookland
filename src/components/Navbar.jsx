@@ -2,7 +2,7 @@
 import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 
@@ -12,26 +12,16 @@ const Navbar = () => {
   console.log(user);
   const handleSignOut = async () => {
     await authClient.signOut();
-  }
+
+    router.push('/');
+  };
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
 
   const navLinkStyle = path =>
     `relative pb-1 ${pathname === path ? 'text-yellow-600' : 'text-black'}`;
 
-  // const navItems = (
-  //   <>
-  //     <li className={navLinkStyle('/')}>
-  //       <Link href="/">Home</Link>
-  //     </li>
-  //     <li className={navLinkStyle('/all-books')}>
-  //       <Link href="/all-books">All Books</Link>
-  //     </li>
-  //     <li className={navLinkStyle('/profile')}>
-  //       <Link href="/profile">Profile</Link>
-  //     </li>
-  //   </>
-  // );
   const navItems = (
     <>
       <li className={navLinkStyle('/')}>

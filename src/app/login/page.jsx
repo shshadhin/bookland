@@ -4,10 +4,11 @@ import Link from 'next/link';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import { authClient } from '@/lib/auth-client';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
 const LoginPage = () => {
+   const router = useRouter();
   const handleSubmit = async e => {
     e.preventDefault();
 
@@ -21,10 +22,10 @@ const LoginPage = () => {
     console.log('Data', data, error);
     if (data) {
       toast.success('Login Successful')
-      redirect("/");
+      router.replace('/');
     }
     if (error) {
-      alert('Error')
+      toast.error('Invalid email or password');
     }
   };
   const handleGoogleSignIn = async () => {

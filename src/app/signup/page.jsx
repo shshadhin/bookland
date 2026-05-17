@@ -3,10 +3,11 @@ import Link from 'next/link';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEnvelope, FaImage, FaLock, FaUser } from 'react-icons/fa';
 import { authClient } from '@/lib/auth-client';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
+   const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -21,7 +22,11 @@ const SignUpPage = () => {
     });
     console.log('Data', data, error);
     if (data) {
-      redirect('/login')
+      toast.success('Signup Successful, Please login');
+
+      setTimeout(() => {
+        router.replace('/login');
+      }, 1000);
     }
     if (error) {
       toast.error('This email is already used');
@@ -68,6 +73,7 @@ const SignUpPage = () => {
                 <input
                   type="text"
                   name="name"
+                  required
                   placeholder="John Doe"
                   className="w-full border border-gray-300 rounded-lg py-3 pl-11 pr-4 outline-none focus:border-purple-500"
                 />
@@ -86,6 +92,7 @@ const SignUpPage = () => {
                 <input
                   type="email"
                   name="email"
+                  required
                   placeholder="hello@example.com"
                   className="w-full border border-gray-300 rounded-lg py-3 pl-11 pr-4 outline-none focus:border-purple-500"
                 />
@@ -104,6 +111,7 @@ const SignUpPage = () => {
                 <input
                   type="password"
                   name="password"
+                  required
                   placeholder="••••••••"
                   className="w-full border border-gray-300 rounded-lg py-3 pl-11 pr-4 outline-none focus:border-purple-500"
                 />
