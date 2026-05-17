@@ -17,9 +17,7 @@ const ProfilePage = () => {
         <div className="flex justify-center">
           <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
             <Image
-              src={
-                user?.image || 'https://i.ibb.co.com/5W1Jz4w/default-user.png'
-              }
+              src={user?.image || 'https://i.ibb.co/5W1Jz4w/default-user.png'}
               alt="profile"
               fill
               className="object-cover"
